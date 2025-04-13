@@ -15,6 +15,7 @@ body{
 
 a{
  text-decoration: none;
+ color: #ffffff;
 }
 
 header{
@@ -41,7 +42,6 @@ header nav .nav__right{
 
 nav .nav__right a{
  margin-right: 15px;
- color: #ffffff;
 }
 
 nav .nav__right .menu-icon {
@@ -82,10 +82,12 @@ main .main-input{
  width: 530px;
  margin: 0 auto;
  margin-bottom: 35px;
+ display: flex;
 }
 
 main .main-input-container {
- width: 525px;
+ width: 590px;
+ height: 50px;
  border-radius: 100px;
  border: 1px solid #1d1c1c;
  display: flex;
@@ -96,7 +98,6 @@ main .main-input-container {
 
 main .main-input-container input{
  width: 450px;
- height: 40px;
  outline: none;
  border: none;
  background-color: #3f4454;
@@ -126,8 +127,9 @@ main .main-input .micro-icon{
 }
 
 main .main-buttons{
-width: 530px;
-margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 main .main-buttons div{
@@ -149,3 +151,98 @@ main .main-buttons button{
 main .main-buttons button:hover{
  border: 1px solid #a09d9d;
 }
+
+footer{
+ width: 100%;
+ height: 50px;
+ position: absolute;
+ bottom: 0;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ align-items: center;
+ font-size: 1.3rem;
+ background-color: #1f2128;
+ border: 1px solid #292c32;
+}
+
+footer ul{
+ margin: 10px;
+ list-style: none;
+ display: flex;
+ padding-left: 0;
+}
+
+footer .footer-left{
+ justify-content: left;
+}
+
+footer .footer-right{
+ justify-content: right;
+}
+
+footer ul li a{
+ margin: 10px;
+}
+
+@media (max-width:320px) {
+  header {
+   width: 100%;
+   position: relative;
+   font-size: 1rem;
+  }
+  header .nav__right{
+   position: absolute;
+   height: 30px;
+   width: 20px;
+   padding: 10px;
+  }
+
+  header .nav__right li{
+   width: 50px;
+   margin-right: -7px;
+  }
+
+  main {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   }
+   main .main-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   main .main-logo img{
+    margin-right: 100px;
+    width: 130px;
+    height: 40px;
+   }
+  
+  /* Se adapta el contenedor de input para que ocupe la mayor parte del ancho disponible */
+  main .main-input-container {
+    width: 100px;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  /* Ajuste del input interno para que se vea proporcional en pantallas de 320px */
+  main .main-input-container input {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+  
+  /* Se reduce ligeramente el tamaño de los íconos para ajustarlos correctamente */
+  main .main-input .search-icon,
+  main .main-input .micro-icon {
+    width: 18px;
+    height: 18px;
+    margin: 0 3px;
+  }
+  footer{
+   display: block;
+  }
+ }
